@@ -66,4 +66,48 @@ form{
 .search-result img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.search-result:hover img{
+ opacity: .8;
+}
+
+.search-result a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding:10px;
+    text-transform: capitalize;
+}
+
+#show-more-button{
+    background-color: #008cba;
+    font-size: 18px;
+    border:none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display:block;
+    margin: 30px auto;
+    border-radius: 5px;
+    cursor:pointer;
+    display:none;
+}
+/*smartphone screen*/
+@media screen and (max-width: 480px){
+    .search-result{
+        width:100%;
+    }
+}
+/*tablet*/
+@media screen and (max-width: 768px){
+    .search-result{
+        width:45%;
+    }
+    .search-results{
+        padding:20px;
+    }
 }
