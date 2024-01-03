@@ -32,7 +32,7 @@ async function searchImages(){
 
     imageWrapper.appendChild(image);
     imageWrapper.appendChild(imageLink);
-    imageWrapper.appendChild(imageWrapper);
+    searchResults.appendChild(imageWrapper);
     });
 
     page++
@@ -45,10 +45,10 @@ formEl.addEventListener("submit", (event)=>{
     event.preventDefault()
     page = 1;
     searchImages()
-})
+});
 
 showMore.addEventListener("click", ()=>{
     event.preventDefault()
     page = 1;
     searchImages()
-})
+});
