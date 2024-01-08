@@ -5,7 +5,7 @@ const searchResults = document.querySelector(".search-results");
 const showMore = document.getElementById("show-more-button");
 
 let inputData = "";
-let page = 1;
+let page = 2;
 
 async function searchImages(){
     inputData = inputEl.value;
@@ -35,20 +35,18 @@ async function searchImages(){
     searchResults.appendChild(imageWrapper);
     });
 
-    page++
+    page = page+1;
     if(page > 1){
         showMore.style.display = "block";
     }
 }
 
 formEl.addEventListener("submit", (event)=>{
-    event.preventDefault()
+    event.preventDefault();
     page = 1;
-    searchImages()
+    searchImages();
 });
 
 showMore.addEventListener("click", ()=>{
-    event.preventDefault()
-    page = 1;
-    searchImages()
+    searchImages();
 });
